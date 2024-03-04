@@ -16,8 +16,11 @@
                 </svg>
             </a>
             <a href="/favorite.html" class="header__link header__link_favorite">
-                Favorites
+                <span>Favorites</span>
             </a>
+            <svg class="header__icon">
+                <use xlink:href="/image/sprite.svg#star-ob"></use>
+            </svg>
         </div>
     </header>
 
@@ -25,10 +28,13 @@
         <section class="search">
             <div class="container">
                 <form class="search__form">
-                    <label class="search__label">
-                        <input type="search" class="search__input">
-                        <button class="search__btn" type="submit">search</button>
-                    </label>
+                    <input type="search" class="search__input">
+                    <button class="search__btn" type="submit">
+                        <span>search</span>
+                        <svg class="serarch__icon">
+                            <use xlink:href="/image/sprite.svg#search"></use>
+                        </svg>
+                    </button>
                 </form>
             </div>
         </section>
@@ -39,24 +45,60 @@
                     <li class="video-list__item">
                         <article class="video-card">
                             <a href="/video/11" class="video-card__link">
-                                <img src="image/image1.jpg" alt="video preview Philosophy of the One Going to the River" class="video-card__thumbnail">
+                                <img src="image/image1.jpg" alt="video preview Philosophy of the One Going to the River"
+                                    class="video-card__thumbnail">
                                 <h3 class="video-card__title">Philosophy of the One Going to the River</h3>
                                 <p class="video-card__channel">The right hemisphere of an introvert</p>
                                 <p class="video-card__duration">31 min 25 sec</p>
                             </a>
-                            <button class="video-card__favorite" type="button"></button>
+                            <button class="video-card__favorite" type="button"
+                                aria-label="Add to Favorites Philosophy of the One Going to the River">Add to
+                                Favorites
+                            <svg class="serarch__icon">
+                                <use class="star-o" xlink:href="/image/sprite.svg#star-ob"></use>
+                                <use class="star" xlink:href="/image/sprite.svg#star"></use>
+                            </svg>
+                            </button>
                         </article>
                     </li>
 
                     <li class="video-list__item">
                         <article class="video-card">
                             <a href="/video/12" class="video-card__link">
-                                <img src="image/image2.jpg" alt="video preview How to survive in the Middle Ages" class="video-card__thumbnail">
+                                <img src="image/image2.jpg" alt="video preview How to survive in the Middle Ages"
+                                    class="video-card__thumbnail">
                                 <h3 class="video-card__title">How to survive in the Middle Ages</h3>
                                 <p class="video-card__channel">The right hemisphere of an introvert</p>
                                 <p class="video-card__duration">31 min 25 sec</p>
                             </a>
-                            <button class="video-card__favorite" type="button"></button>
+                            <button class="video-card__favorite" type="button"
+                                aria-label="Add to Favorites Philosophy of the One Going to the River">Add to
+                                Favorites
+                            <svg class="serarch__icon">
+                                <use class="star-o" xlink:href="/image/sprite.svg#star-ob"></use>
+                                <use class="star" xlink:href="/image/sprite.svg#star"></use>
+                            </svg>
+                            </button>
+                        </article>
+                    </li>
+
+                    <li class="video-list__item">
+                        <article class="video-card">
+                            <a href="/video/12" class="video-card__link">
+                                <img src="image/image2.jpg" alt="video preview How to survive in the Middle Ages"
+                                    class="video-card__thumbnail">
+                                <h3 class="video-card__title">How to survive in the Middle Ages</h3>
+                                <p class="video-card__channel">The right hemisphere of an introvert</p>
+                                <p class="video-card__duration">31 min 25 sec</p>
+                            </a>
+                            <button class="video-card__favorite" type="button"
+                                aria-label="Add to Favorites Philosophy of the One Going to the River">Add to
+                                Favorites
+                            <svg class="serarch__icon">
+                                <use class="star-o" xlink:href="/image/sprite.svg#star-ob"></use>
+                                <use class="star" xlink:href="/image/sprite.svg#star"></use>
+                            </svg>
+                            </button>
                         </article>
                     </li>
                 </ul>
