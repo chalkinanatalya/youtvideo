@@ -33,7 +33,7 @@
                     <input type="search" class="search__input">
                     <button class="search__btn" type="submit">
                         <span>search</span>
-                        <svg class="serarch__icon">
+                        <svg class="search__icon">
                             <use xlink:href="/image/sprite.svg#search"></use>
                         </svg>
                     </button>
@@ -41,31 +41,42 @@
             </div>
         </section>
         <section class="video">
-            <div class="container video__container">
+            <div class="container">
                 <div class="video__player">
-                    <iframe src="https://www.youtube.com/embed/ax-2LKVrKzg?si=c28WPZxBqu-JHUXc" frameborder="0"
+                    <iframe class="video__iframe" src="https://www.youtube.com/embed/ax-2LKVrKzg?si=c28WPZxBqu-JHUXc"
+                        frameborder="0"
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                         allowfullscreen></iframe>
                 </div>
-                <div class="video__content">
-                    <h2 class="video__title">
-                        Philosophy of the One Going to the River
-                    </h2>
-                    <p class="video__channel">
-                        The right hemisphere of an introvert
-                    </p>
-                    <p class="video__info">
-                        <span class="video__views">1,575,581 views</span>
-                        <span class="video__date">Premiere date: Aug 16 2024</span>
-                    </p>
-                    <p class="video__description">Watch our summary course How to Understand Philosophy in the
-                        background.</p>
+                <div class="video__container">
+                    <div class="video__content">
+                        <h2 class="video__title">
+                            Philosophy of the One Going to the River
+                        </h2>
+                        <p class="video__channel">
+                            The right hemisphere of an introvert
+                        </p>
+                        <p class="video__info">
+                            <span class="video__views">1,575,581 views</span>
+                            <span class="video__date">Premiere date: Aug 16 2024</span>
+                        </p>
+                        <p class="video__description">Watch our summary course How to Understand Philosophy in the
+                            background.</p>
+                    </div>
+
+                    <button href="/favorite.html" class="video__link video__link_active">
+                        <span class="video__no-favorite">Favorites</span>
+                        <span class="video__favorite">In Favorites</span>
+                        <svg class="video__icon">
+                            <use xlink:href="/image/sprite.svg#star-ob"></use>
+                        </svg>
+                    </button>
                 </div>
             </div>
         </section>
         <section class="video-list">
             <div class="container">
-                <h2 class="video-list__title">Similar video</h2>
+                <h2 class="video-list__title">Trending</h2>
                 <ul class="video-list__items">
                     <li class="video-list__item">
                         <article class="video-card">
@@ -77,9 +88,8 @@
                                 <p class="video-card__duration">31 min 25 sec</p>
                             </a>
                             <button class="video-card__favorite" type="button"
-                                aria-label="Add to Favorites Philosophy of the One Going to the River">Add to
-                                Favorites
-                                <svg class="serarch__icon">
+                                aria-label="Add to Favorites Philosophy of the One Going to the River">
+                                <svg class="video-card__icon">
                                     <use class="star-o" xlink:href="/image/sprite.svg#star-ob"></use>
                                     <use class="star" xlink:href="/image/sprite.svg#star"></use>
                                 </svg>
@@ -97,9 +107,8 @@
                                 <p class="video-card__duration">31 min 25 sec</p>
                             </a>
                             <button class="video-card__favorite" type="button"
-                                aria-label="Add to Favorites Philosophy of the One Going to the River">Add to
-                                Favorites
-                                <svg class="serarch__icon">
+                                aria-label="Add to Favorites Philosophy of the One Going to the River">
+                                <svg class="video-card__icon">
                                     <use class="star-o" xlink:href="/image/sprite.svg#star-ob"></use>
                                     <use class="star" xlink:href="/image/sprite.svg#star"></use>
                                 </svg>
@@ -116,10 +125,9 @@
                                 <p class="video-card__channel">The right hemisphere of an introvert</p>
                                 <p class="video-card__duration">31 min 25 sec</p>
                             </a>
-                            <button class="video-card__favorite" type="button"
-                                aria-label="Add to Favorites Philosophy of the One Going to the River">Add to
-                                Favorites
-                                <svg class="serarch__icon">
+                            <button class="video-card__favorite video-card__favorite_active" type="button"
+                                aria-label="Add to Favorites Philosophy of the One Going to the River">
+                                <svg class="video-card__icon">
                                     <use class="star-o" xlink:href="/image/sprite.svg#star-ob"></use>
                                     <use class="star" xlink:href="/image/sprite.svg#star"></use>
                                 </svg>
