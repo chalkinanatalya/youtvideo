@@ -91,8 +91,10 @@ html {
   
   
   .container {
-    max-width: 1320px;
-    padding: 0 30px;
+    --container-width: 1260px;
+    --container-offset: 30px;
+    max-width: calc(var(--container-width) + var(--container-offset) * 2);
+    padding: 0 var(--container-offset);
     margin: 0 auto;
   }
 
@@ -164,11 +166,13 @@ html {
     font-weight: 900;
     letter-spacing: 0.02em;
     margin-bottom: 40px;
+    text-align: center;
   }
 
   .hero__tagline {
     font-size: 20px;
     letter-spacing: 0.02em;
+    text-align: center;
   }
 
   .search__form {
@@ -183,6 +187,11 @@ html {
     padding: 10px 124px 10px 24px;
     outline: none;
     font-size: 16px;
+    letter-spacing: 0.02em;
+  }
+
+  .search__input::placeholder {
+    color: #292D32;
     letter-spacing: 0.02em;
   }
 
@@ -320,7 +329,9 @@ html {
   }
 
   .video__link {
+    flex-shrink: 0;
     width: max-content;
+    align-self: start;
     white-space: nowrap;
     display: flex;
     gap: 4px;
@@ -345,4 +356,49 @@ html {
   .video__icon {
     width: 20px;
     height: 20px;
+  }
+
+  @media (width <= 1024px) {
+    .container {
+      --container-width: 942px;
+    }
+
+    .hero {
+      padding: 40px 0 58px;
+    }
+
+    .hero__logo {
+      width: 200px;
+      margin-bottom: 45px;
+    }
+
+    .hero__title {
+      font-size: 50px;
+      margin-bottom: 32px;
+    }
+
+    .video-list {
+      padding: 60px 0;
+    }
+
+    .video-list__items {
+      row-gap: 32px;
+    }
+
+    .video-list-title {
+      font-size: 32px;
+      margin-bottom: 40px;
+    }
+
+    .video-card__title {
+      font-size: 24px;
+    }
+
+    .video-card__channel {
+      font-size: 20px;
+    }
+
+    .video-card__duration {
+      font-size: 16px;
+    }
   }
