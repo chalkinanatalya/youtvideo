@@ -18,11 +18,11 @@
                 </svg>
             </a>
             <a href="/favorite.html" class="header__link header__link_favorite">
-                <span>Favorites</span>
+                <span class="header__link-text">Favorites</span>
+                <svg class="header__icon">
+                    <use xlink:href="/image/sprite.svg#star-ob"></use>
+                </svg>
             </a>
-            <svg class="header__icon">
-                <use xlink:href="/image/sprite.svg#star-ob"></use>
-            </svg>
         </div>
     </header>
 
@@ -30,10 +30,10 @@
         <section class="search">
             <div class="container">
                 <form class="search__form">
-                    <input type="search" class="search__input">
+                    <input type="search" class="search__input" placeholder="Search video...">
                     <button class="search__btn" type="submit">
                         <span>search</span>
-                        <svg class="serarch__icon">
+                        <svg class="search__icon">
                             <use xlink:href="/image/sprite.svg#search"></use>
                         </svg>
                     </button>
@@ -42,7 +42,7 @@
         </section>
         <section class="video-list">
             <div class="container">
-                <h2 class="video-list__title">Favorites</h2>
+                <h2 class="video-list__title">Trending</h2>
                 <ul class="video-list__items">
                     <li class="video-list__item">
                         <article class="video-card">
@@ -54,9 +54,8 @@
                                 <p class="video-card__duration">31 min 25 sec</p>
                             </a>
                             <button class="video-card__favorite" type="button"
-                                aria-label="Add to Favorites Philosophy of the One Going to the River">Add to
-                                Favorites
-                                <svg class="serarch__icon">
+                                aria-label="Add to Favorites Philosophy of the One Going to the River">
+                                <svg class="video-card__icon">
                                     <use class="star-o" xlink:href="/image/sprite.svg#star-ob"></use>
                                     <use class="star" xlink:href="/image/sprite.svg#star"></use>
                                 </svg>
@@ -74,9 +73,8 @@
                                 <p class="video-card__duration">31 min 25 sec</p>
                             </a>
                             <button class="video-card__favorite" type="button"
-                                aria-label="Add to Favorites Philosophy of the One Going to the River">Add to
-                                Favorites
-                                <svg class="serarch__icon">
+                                aria-label="Add to Favorites Philosophy of the One Going to the River">
+                                <svg class="video-card__icon">
                                     <use class="star-o" xlink:href="/image/sprite.svg#star-ob"></use>
                                     <use class="star" xlink:href="/image/sprite.svg#star"></use>
                                 </svg>
@@ -93,10 +91,9 @@
                                 <p class="video-card__channel">The right hemisphere of an introvert</p>
                                 <p class="video-card__duration">31 min 25 sec</p>
                             </a>
-                            <button class="video-card__favorite" type="button"
-                                aria-label="Add to Favorites Philosophy of the One Going to the River">Add to
-                                Favorites
-                                <svg class="serarch__icon">
+                            <button class="video-card__favorite video-card__favorite_active" type="button"
+                                aria-label="Add to Favorites Philosophy of the One Going to the River">
+                                <svg class="video-card__icon">
                                     <use class="star-o" xlink:href="/image/sprite.svg#star-ob"></use>
                                     <use class="star" xlink:href="/image/sprite.svg#star"></use>
                                 </svg>
