@@ -1,4 +1,4 @@
-import { API_KEY, VIDEOS_URL } from './key.js';
+import { API_KEY, VIDEOS_URL, favoriteIds } from './key.js';
 
 const videoListItems = document.querySelector('.video-list__items');
 
@@ -63,8 +63,8 @@ const displayVideo = async (videos) => {
                 <p class="video-card__channel">${video.snippet.channelTitle}</p>
                 <p class="video-card__duration">${convertISOtoReadableDduration(video.contentDetails.duration)}</p>
             </a>
-            <button class="video-card__favorite favorite" type="button"
-                aria-label="Add to Favorites ${video.snippet.title}">
+            <button class="video-card__favorite favorite ${favoriteIds.includes(video.id) ? 'active' : ''}" type="button"
+                aria-label="Add to Favorites ${video.snippet.title}" data-video-id="${video.id}">
                 <svg class="video-card__icon">
                     <use class="star-o" xlink:href="/image/sprite.svg#star-ob"></use>
                     <use class="star" xlink:href="/image/sprite.svg#star"></use>
@@ -82,9 +82,25 @@ const init = () => {
     fetchTrendingVideos().then(displayVideo);
 
     document.body.addEventListener('click', ({target}) => {
-        const item = target.closest('.favorite');
+        const itemFavorite = target.closest('.favorite');
+
+        if(itemFavorite) {
+            const videoId = itemFavorite.dataset.videoId;
+            if(favoriteIds.includes(videoId)) {
+                favoriteIds.splice(favoriteIds.indexOf(videoId), 1);
+                localStorage.setItem('favoriteYT', JSON.stringify(favoriteIds));
+                itemFavorite.classList.remove('active')
+            } else {
+                favoriteIds.push(videoId);
+                localStorage.setItem('favoriteYT', JSON.stringify(favoriteIds));
+                itemFavorite.classList.add('active')
+            }
+        }
     });
 }
+
+init();
+
 
 
 
