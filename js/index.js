@@ -176,9 +176,11 @@ const init = () => {
     const videoId = urlSearchParams.get('id');
     const searchQuery = urlSearchParams.get('q');
 
-    if(currentPage === 'index.html' || currentPage === '') {
+    if(videoListItems) {
         fetchTrendingVideos().then(displayListVideo);
-    } else if (currentPage === 'video.html' && videoId) {
+    }
+
+    if (currentPage === 'video.html' && videoId) {
         fetchVideoData(videoId).then(displayVideo);
     } else if (currentPage === 'favorite.html') {
         fetchFavoriteVideos().then(displayListVideo);
@@ -205,6 +207,7 @@ const init = () => {
 }
 
 init();
+
 
 
 
